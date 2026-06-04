@@ -11,11 +11,11 @@
   <link rel="alternate" type="application/rss+xml" title="RSS" href="feed.xml">
 
   <!-- Favicon -->
-  <link rel="icon" type="image/svg+xml" href="{{ " img/favicon.svg" }}">
-  <link rel="mask-icon" href="{{ " img/favicon.svg" }}" color="#000000">
+  <link rel="icon" type="image/svg+xml" href="{{ '/img/favicon.svg' | relative_url }}">
+  <link rel="mask-icon" href="{{ '/img/favicon.svg' | relative_url }}" color="#000000">
 
   <!-- Custom CSS & Bootstrap Core CSS - Uses Bootswatch Flatly Theme: http://bootswatch.com/flatly/ -->
-  <link rel="stylesheet" href="{{ " style.css" }}">
+  <link rel="stylesheet" href="{{ '/style.css' | relative_url }}">
 
   <!-- Google verification -->
   {% if site.google_verify %}
@@ -26,7 +26,7 @@
   <meta name="msvalidate.01" content="{{ site.bing_verify }}">{% endif %}
 
   <!-- Custom Fonts -->
-  <link rel="stylesheet" href="{{ " css/font-awesome/css/all.min.css" }}">
+  <link rel="stylesheet" href="{{ '/css/font-awesome/css/all.min.css' | relative_url }}">
   <link href="//fonts.googleapis.com/css?family=Montserrat:400,700" rel="stylesheet" type="text/css">
   <link href="//fonts.googleapis.com/css?family=Lato:400,700,400italic,700italic" rel="stylesheet" type="text/css">
 

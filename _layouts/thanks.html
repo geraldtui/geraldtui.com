@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+{% include head.html %}
+
+<body id="page-top" class="index">
+  <!-- Navigation (links point back to the homepage sections) -->
+  <nav class="navbar navbar-default navbar-fixed-top">
+    <div class="container">
+      <div class="navbar-header page-scroll">
+        <a class="navbar-brand" href="{{ '/' | absolute_url }}">{{ site.title }}</a>
+      </div>
+      <div class="collapse navbar-collapse">
+        <ul class="nav navbar-nav navbar-right">
+          <li><a href="{{ '/#portfolio' | absolute_url }}">Portfolio</a></li>
+          <li><a href="{{ '/#about' | absolute_url }}">About</a></li>
+          <li><a href="{{ '/#contact' | absolute_url }}">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  {{ content }}
+
+  {% include footer.html %}
+  {% include js.html %}
+</body>
+
+</html>

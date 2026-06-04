@@ -3,10 +3,13 @@ title: Gerald Tuimalealiifano
 email: tui.gerald@gmail.com
 url: https://geraldtui.com
 
-# Formspree form ID for the contact form (https://formspree.io).
-# Create a form in your Formspree account (signed up with the email above),
-# then paste the ID that appears after /f/ in your endpoint URL.
-formspree_id: xaqzydag
+# Contact form backend: FormSubmit.co (https://formsubmit.co).
+# Free, no account needed. Submissions are forwarded to the address below.
+# The FIRST submission from the live site triggers a one-time confirmation
+# email from FormSubmit — click "Activate Form" in it to start receiving mail.
+# NOTE: FormSubmit's autoresponse (confirmation email to the sender) only works
+# with a standard (non-AJAX) form submit, which is why this form redirects.
+formsubmit_email: gerald.tui@live.com
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 keywords: "your keywords, separated by commas"
 skills: "Software Engineer - Project Manager - IT Consultant"

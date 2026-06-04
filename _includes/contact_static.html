@@ -9,7 +9,7 @@
     </div>
     <div class="row">
       <div class="col-lg-8 col-lg-offset-2">
-        <form action="https://formspree.io/f/{{ site.formspree_id }}" method="POST" name="sentMessage" id="contactForm" novalidate>
+        <form action="https://formsubmit.co/{{ site.formsubmit_email }}" method="POST" name="sentMessage" id="contactForm" novalidate>
           <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
               <label for="name">Name</label>
@@ -27,10 +27,13 @@
             </div>
           </div>
           <div>
-            <input type="hidden" name="_subject" value="New submission!">
+            <input type="hidden" name="_subject" value="New message from your website">
+            <input type="hidden" name="_template" value="table">
             <input type="hidden" name="_autoresponse"
               value="Thanks for getting in touch! I've received your message and will be in touch soon. — Gerald">
-            <input type="text" name="_gotcha" style="display:none" />
+            <input type="hidden" name="_next" value="{{ '/thanks/' | absolute_url }}">
+            <!-- Honeypot: bots fill this hidden field; real users never see it -->
+            <input type="text" name="_honey" style="display:none" />
           </div>
           <div class="row control-group">
             <div class="form-group col-xs-12 floating-label-form-group controls">
