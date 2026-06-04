@@ -1,11 +1,16 @@
 # Site settings
-title: Freelancer
-email: your-email@domain.com
-url: https://github.com/jeromelachaud/freelancer-theme
+title: Gerald Tuimalealiifano
+email: tui.gerald@gmail.com
+url: https://geraldtui.com
+
+# Formspree form ID for the contact form (https://formspree.io).
+# Create a form in your Formspree account (signed up with the email above),
+# then paste the ID that appears after /f/ in your endpoint URL.
+formspree_id: xaqzydag
 description: "Write an awesome description for your new site here. You can edit this line in _config.yml. It will appear in your document head meta (for Google search results) and in your feed.xml site description."
 keywords: "your keywords, separated by commas"
-skills: "Web Developer - Graphic Artist - User Experience Designer"
-meta_author: LastName FirstName
+skills: "Software Engineer - Project Manager - IT Consultant"
+meta_author: Gerald Tuimalealiifano
 
 # Google webmaster tools
 google_verify:
@@ -24,48 +29,38 @@ contact: static
 disqus_shortname: myshortname
 
 # Color settings (hex-codes without the leading hash-tag)
+# Monochromatic charcoal palette with a purple accent.
 color:
-  primary: 18bc9c #80B3FF
-  primary-rgb: "24,288,156" #"128,179,255"
-  secondary: 2c3e50 #FD6E8A
-  secondary-dark: 233140 #A2122F
+  primary: 7c3aed       # purple accent
+  primary-rgb: "124,58,237"
+  primary-dark: 6d28d9  # deeper purple for hover/active states
+  secondary: 1f2430     # charcoal (footer / dark sections)
+  secondary-dark: 14171f # near-black
+  text: 1f2430          # default body text
+  muted: 6b7280         # muted grey for secondary text
+  surface: f5f6f8       # light grey section background
 
 # Footer settings
 footer:
-  copyright: Dr. Henry Jekyll
-  location: Location
-  social: Around the Web
-  credits: Credits
+  copyright: Gerald Tui 2026
 
 # Social networks usernames (many more available: google-plus, flickr, dribbble, pinterest, instagram, tumblr, linkedin, etc.)
 social:
-  - title: twitter
-    url: http://twitter.com/jekyllrb
-  - title: facebook
-    url:
-  - title: stack-overflow
-    url: http://stackoverflow.com/questions/tagged/jekyll
-  - title: bitbucket
-    url: http://bitbucket.org/jekyll
-  - title: github
-    url: http://github.com/jekyll
 
 # Postal address (add as many lines as necessary)
 address:
-  - line: 3481 Melrose Place
-  - line: Beverly Hills, CA 90210
 
 # Credits content
-credits: 'Freelancer is a free to use, open source Bootstrap theme created by <a href="http://startbootstrap.com">Start Bootstrap</a>.'
+credits:
 
 # Build settings
 markdown: kramdown
 permalink: pretty
 
-#for posts
+#for posts (project case-studies; rendered inside modals on the home page)
 defaults:
   - scope:
       path: ""
       type: "posts"
     values:
-      permalink: ""
+      permalink: "/projects/:title/"

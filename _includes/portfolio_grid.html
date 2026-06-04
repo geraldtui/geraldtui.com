@@ -1,25 +1,91 @@
-<!-- Portfolio Grid Section -->
-<section id="portfolio">
-  <div class="container portfolio-flex-grid">
+<!-- Portfolio / Capabilities Section -->
+<section id="portfolio" class="portfolio-section">
+  <div class="container">
     <div class="row">
       <div class="col-lg-12 text-center">
         <h2>Portfolio</h2>
         <hr class="star-primary">
+        <p class="portfolio-intro">The areas where I help organisations move faster and operate with confidence. Select one to see the work I've delivered.</p>
       </div>
     </div>
-    <div class="portfolio-flex-row">
-      {% for post in site.posts %}
-      <div class="portfolio-flex-item portfolio-item">
-        <a href="#portfolioModal-{{ post.modal-id }}" class="portfolio-link" data-toggle="modal">
-          <div class="caption">
-            <div class="caption-content">
-              <i class="fa fa-search-plus fa-3x"></i>
-            </div>
-          </div>
-          <img src="img/portfolio/{{ post.img }}" class="img-responsive" alt="{{ post.alt }}">
-        </a>
-      </div>
-      {% endfor %}
+    <div class="portfolio-grid">
+
+      <button type="button" class="portfolio-item" title="Cloud Architecture &amp; Migration" data-toggle="modal" data-target="#catModal-cloud">
+        <i class="fa fa-cloud portfolio-logo" aria-hidden="true"></i>
+        <span class="portfolio-name">Cloud Architecture</span>
+      </button>
+
+      <button type="button" class="portfolio-item" title="Application Development" data-toggle="modal" data-target="#catModal-appdev">
+        <i class="fa fa-code portfolio-logo" aria-hidden="true"></i>
+        <span class="portfolio-name">Application Development</span>
+      </button>
+
+      <button type="button" class="portfolio-item" title="Infrastructure &amp; Networking" data-toggle="modal" data-target="#catModal-networking">
+        <i class="fa fa-sitemap portfolio-logo" aria-hidden="true"></i>
+        <span class="portfolio-name">Infrastructure &amp; Networking</span>
+      </button>
+
+      <button type="button" class="portfolio-item" title="Automation &amp; DevOps" data-toggle="modal" data-target="#catModal-automation">
+        <i class="fa fa-cogs portfolio-logo" aria-hidden="true"></i>
+        <span class="portfolio-name">Automation</span>
+      </button>
+
+      <button type="button" class="portfolio-item" title="Project Management" data-toggle="modal" data-target="#catModal-projectmgmt">
+        <i class="fa fa-users portfolio-logo" aria-hidden="true"></i>
+        <span class="portfolio-name">Project Management</span>
+      </button>
+
     </div>
   </div>
+
+  <!-- Per-category project modals -->
+  {% assign cat_slugs = "cloud,appdev,networking,automation,projectmgmt" | split: "," %}
+  {% assign cat_names = "Cloud Architecture & Migration|Application Development|Infrastructure & Networking|Automation & DevOps|Project Management" | split: "|" %}
+  {% assign cat_blurbs = "Designing and migrating resilient, cost-effective cloud foundations.|Building custom platforms and tools that fit how your teams work.|Connecting environments securely and reliably across regions and accounts.|Removing manual, error-prone work so delivery is faster and safer.|Leading delivery end-to-end, keeping stakeholders aligned and projects on track." | split: "|" %}
+  {% for slug in cat_slugs %}
+  {% assign cat_name = cat_names[forloop.index0] %}
+  {% assign cat_blurb = cat_blurbs[forloop.index0] %}
+  {% assign cat_posts = site.posts | where_exp: "post", "post.categories contains slug" %}
+  <div class="portfolio-modal cat-modal modal fade" id="catModal-{{ slug }}" tabindex="-1" role="dialog" aria-hidden="true">
+    <div class="modal-content">
+      <div class="close-modal" data-dismiss="modal">
+        <div class="lr">
+          <div class="rl"></div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="row">
+          <div class="col-lg-8 col-lg-offset-2">
+            <div class="modal-body">
+              <h2>{{ cat_name }}</h2>
+              <hr class="star-primary">
+              <p class="cat-modal-blurb">{{ cat_blurb }}</p>
+              {% if cat_posts.size > 0 %}
+              <p class="cat-modal-count">{{ cat_posts.size }} project{% if cat_posts.size != 1 %}s{% endif %} delivered.</p>
+              <div class="cat-project-list">
+                {% for post in cat_posts %}
+                <div class="cat-project">
+                  <h3 class="cat-project-title">{{ post.title }}</h3>
+                  {% if post.summary %}
+                  <p class="cat-project-summary">{{ post.summary }}</p>
+                  {% endif %}
+                  <ul class="list-inline cat-project-meta">
+                    {% if post.client %}<li>Client: <strong>{{ post.client }}</strong></li>{% endif %}
+                    {% if post.role %}<li>Role: <strong>{{ post.role }}</strong></li>{% endif %}
+                    {% if post.project-date %}<li>Date: <strong>{{ post.project-date }}</strong></li>{% endif %}
+                  </ul>
+                </div>
+                {% endfor %}
+              </div>
+              {% else %}
+              <p class="cat-modal-empty">No projects logged in this area yet.</p>
+              {% endif %}
+              <button type="button" class="btn btn-default" data-dismiss="modal"><i class="fa fa-times"></i> Close</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  {% endfor %}
 </section>
