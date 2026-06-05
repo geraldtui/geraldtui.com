@@ -7,21 +7,20 @@ tech:
   - terraform
 categories:
   - cloud
-  - networking
-  - automation
 client: Workday
 project-date: 2024
 role: Senior Platform Engineer (DevOps/SRE)
-summary: Engineered a highly available, multi-region Kubernetes platform on AWS EKS that reached 99.99% uptime while cutting operational overhead in half.
+summary: Architected a highly available, multi-region Kubernetes cloud platform on AWS EKS that reached 99.99% uptime while cutting operational overhead in half.
 ---
 
-Engineered and managed the deployment of a highly available, multi-region Amazon EKS
-platform supporting thousands of critical internal services across Workday engineering.
-The platform was built for resilience, security, and scale, giving teams a dependable
-foundation for their workloads.
+Architected and managed the deployment of a highly available, multi-region Amazon EKS
+cloud platform supporting thousands of critical internal services across Workday
+engineering. Designed around an active-active, multi-region AWS architecture, the platform
+delivered resilience, security, and scale as a dependable cloud foundation for teams.
 
 Highlights:
 
-- Achieved 99.99% uptime across a multi-region active-active architecture.
-- Reduced operational overhead by 50% through infrastructure optimization.
-- Hardened security and scalability for thousands of business-critical services.
+- Designed a multi-region active-active AWS EKS architecture achieving 99.99% uptime.
+- Reduced cloud operational overhead by 50% through architecture and infrastructure optimization.
+- Built in security and scalability for thousands of business-critical services.
+- Delivered a resilient cloud foundation spanning multiple AWS regions.

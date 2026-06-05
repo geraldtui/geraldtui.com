@@ -15,6 +15,11 @@
         <span class="portfolio-name">Cloud Architecture</span>
       </button>
 
+      <button type="button" class="portfolio-item" title="AI &amp; Machine Learning" data-toggle="modal" data-target="#catModal-ai">
+        <i class="fa fa-magic portfolio-logo" aria-hidden="true"></i>
+        <span class="portfolio-name">AI &amp; Machine Learning</span>
+      </button>
+
       <button type="button" class="portfolio-item" title="Application Development" data-toggle="modal" data-target="#catModal-appdev">
         <i class="fa fa-code portfolio-logo" aria-hidden="true"></i>
         <span class="portfolio-name">Application Development</span>
@@ -39,9 +44,9 @@
   </div>
 
   <!-- Per-category project modals -->
-  {% assign cat_slugs = "cloud,appdev,networking,automation,projectmgmt" | split: "," %}
-  {% assign cat_names = "Cloud Architecture & Migration|Application Development|Infrastructure & Networking|Automation & DevOps|Project Management" | split: "|" %}
-  {% assign cat_blurbs = "Designing and migrating resilient, cost-effective cloud foundations.|Building custom platforms and tools that fit how your teams work.|Connecting environments securely and reliably across regions and accounts.|Removing manual, error-prone work so delivery is faster and safer.|Leading delivery end-to-end, keeping stakeholders aligned and projects on track." | split: "|" %}
+  {% assign cat_slugs = "ai,cloud,appdev,networking,automation,projectmgmt" | split: "," %}
+  {% assign cat_names = "AI & Machine Learning|Cloud Architecture & Migration|Application Development|Infrastructure & Networking|Automation & DevOps|Project Management" | split: "|" %}
+  {% assign cat_blurbs = "Building practical AI agents, frameworks, and tooling that help engineering teams work faster and smarter.|Designing and migrating resilient, cost-effective cloud foundations.|Building custom platforms and tools that fit how your teams work.|Connecting environments securely and reliably across regions and accounts.|Removing manual, error-prone work so delivery is faster and safer.|Leading delivery end-to-end, keeping stakeholders aligned and projects on track." | split: "|" %}
   {% for slug in cat_slugs %}
   {% assign cat_name = cat_names[forloop.index0] %}
   {% assign cat_blurb = cat_blurbs[forloop.index0] %}

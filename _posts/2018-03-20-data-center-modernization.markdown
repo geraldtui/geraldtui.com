@@ -6,20 +6,21 @@ tech:
   - cisco
   - linux
 categories:
-  - cloud
   - networking
 client: Kiwiplan
 project-date: 2018
 role: Lead Systems Engineer
-summary: Modernized core data center infrastructure on Dell and Cisco hardware, improving reliability and performance for global ERP operations.
+summary: Modernized core data center networking and infrastructure on Cisco and Dell hardware, improving reliability and performance for global ERP operations.
 ---
 
-Modernized the company's data center infrastructure, refreshing compute, networking, and
-virtualization platforms on Dell and Cisco hardware. The work gave the business a more
-reliable and performant foundation to support its global ERP and MES software operations.
+Modernized the company's data center infrastructure, refreshing the networking, compute,
+and virtualization platforms on Cisco and Dell hardware. Rebuilding the network and
+infrastructure backbone gave the business a more reliable and performant foundation for
+its global ERP and MES software operations.
 
 Highlights:
 
-- Refreshed core compute and virtualization on modern Dell and Cisco hardware.
-- Improved reliability and performance across the VMware estate.
-- Strengthened the foundation for business continuity and future growth.
+- Refreshed core networking and connectivity on modern Cisco infrastructure.
+- Upgraded compute and the VMware virtualization estate on modern Dell hardware.
+- Improved reliability, performance, and resilience across the data center.
+- Strengthened the infrastructure foundation for business continuity and future growth.

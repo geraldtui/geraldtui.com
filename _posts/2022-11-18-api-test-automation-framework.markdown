@@ -6,20 +6,21 @@ tech:
   - cucumber
   - gherkin
 categories:
-  - appdev
   - automation
 client: Workday
 project-date: 2022
 role: Software Engineer (Full-Stack)
-summary: Implemented a behaviour-driven API test automation framework that cut regression testing time by 70% and raised release quality.
+summary: Automated API regression testing with a behaviour-driven framework, cutting testing time by 70% and removing slow, manual release checks.
 ---
 
-Implemented a new automation framework for API testing using Python with
-Cucumber/Gherkin behaviour-driven tests. The framework raised the quality bar for
-platform releases and freed engineers from slow, manual regression cycles.
+Replaced slow, manual API regression cycles with an automated, behaviour-driven testing
+framework built in Python with Cucumber/Gherkin. Wired into the delivery pipeline, the
+framework gave engineers fast, repeatable feedback and made release validation a hands-off,
+automated step rather than a manual bottleneck.
 
 Highlights:
 
-- Reduced regression testing time by 70%.
-- Established a higher, repeatable quality standard for releases.
-- Introduced behaviour-driven testing that doubled as living documentation.
+- Automated API regression testing, cutting testing time by 70%.
+- Embedded quality gates into the release process for consistent, repeatable validation.
+- Eliminated manual regression checks, freeing engineers for higher-value work.
+- Used behaviour-driven specs that doubled as living, executable documentation.
